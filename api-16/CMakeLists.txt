@@ -4,6 +4,9 @@ if (TARGET ocpn::api)
   return ()
 endif ()
 
+set(API_VERSION "1.16" PARENT_SCOPE)
+set(API_OCPN_MIN_VERSION "5.0.0" PARENT_SCOPE)
+
 add_library(_API INTERFACE)
 add_library(ocpn::api ALIAS _API)
 target_include_directories(_API INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}")
